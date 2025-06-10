@@ -1,0 +1,13 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "main": "src/register.js",
+  "scripts": {
+    "start": "node src/register.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.1",
+    "bcrypt": "^5.1.0"
+  }
+}
