@@ -8,7 +8,7 @@ const Device = sequelize.define('Device', {
     primaryKey: true
   },
   time_register: {
-    type: DataTypes.BIGINT,
+    type: DataTypes.DATE,
     allowNull: false
   },
   password: {

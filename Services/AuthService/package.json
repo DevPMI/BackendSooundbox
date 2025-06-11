@@ -1,9 +1,9 @@
 {
   "name": "auth-service",
   "version": "1.0.0",
-  "main": "src/register.js",
+  "main": "src/Auth.js",
   "scripts": {
-    "start": "node src/register.js"
+    "start": "node src/Auth.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
