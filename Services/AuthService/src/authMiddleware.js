@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = 'rahasia'; // Ganti dengan kunci rahasia aslimu
+const SECRET_KEY = 'rahasia'; 
 
 function verifyToken(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -27,9 +27,9 @@ function verifyToken(req, res, next) {
         }));
     }
 
-    // Simpan data token di request
+    // save data token di request
     req.device = decoded;
-    next(); // Lanjut ke handler berikutnya
+    next(); 
   });
 }
 
