@@ -19,5 +19,4 @@ sequelize.authenticate()
   .then(() => console.log(' DB Connected'))
   .catch(err => console.error(' DB Connection Error:', err));
 
-// export object `sequelize`, bukan class `Sequelize`
 module.exports = sequelize;
