@@ -1,7 +1,7 @@
 {
   "name": "auth-service",
   "version": "1.0.0",
-  "main": "src/Auth.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "reset": "npx sequelize db:drop && npx sequelize db:create",

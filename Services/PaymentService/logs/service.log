@@ -1,0 +1,31 @@
+[2025-06-17T17:53:41.582Z] [REQUEST] GET /inquiry?id=DEVICE123 | Query ID: DEVICE123
+[2025-06-17T17:53:41.583Z] [ERROR] TypeError: Cannot read properties of undefined (reading 'findOne')
+    at inquiryHandler (D:\BackendSooundbox\Services\PaymentService\src\handlers\inquiryHandler.js:15:35)
+    at Server.<anonymous> (D:\BackendSooundbox\Services\PaymentService\src\server.js:12:12)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1143:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+[2025-06-17T18:09:23.260Z] [REQUEST] GET /inquiry?id=DEVICE123 | Query ID: DEVICE123
+[2025-06-17T18:09:23.261Z] [ERROR] TypeError: Cannot read properties of undefined (reading 'findOne')
+    at inquiryHandler (D:\BackendSooundbox\Services\PaymentService\src\handlers\inquiryHandler.js:13:35)
+    at Server.<anonymous> (D:\BackendSooundbox\Services\PaymentService\src\server.js:12:12)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1143:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+[2025-06-17T18:09:23.262Z] [RESPONSE] Status: 500 | Message: Server error
+[2025-06-17T18:15:45.308Z] [REQUEST] GET /inquiry?id=DEVICE123 | Query ID: DEVICE123
+[2025-06-17T18:15:45.310Z] [ERROR] TypeError: Cannot read properties of undefined (reading 'findOne')
+    at inquiryHandler (D:\BackendSooundbox\Services\PaymentService\src\handlers\inquiryHandler.js:12:43)
+    at Server.<anonymous> (D:\BackendSooundbox\Services\PaymentService\src\server.js:12:12)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1143:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+[2025-06-17T18:15:45.310Z] [RESPONSE] Status: 500 | Message: Server error
+[2025-06-17T18:16:08.519Z] [REQUEST] GET /inquiry?id=0078000357 | Query ID: 0078000357
+[2025-06-17T18:16:08.519Z] [ERROR] TypeError: Cannot read properties of undefined (reading 'findOne')
+    at inquiryHandler (D:\BackendSooundbox\Services\PaymentService\src\handlers\inquiryHandler.js:12:43)
+    at Server.<anonymous> (D:\BackendSooundbox\Services\PaymentService\src\server.js:12:12)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1143:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+[2025-06-17T18:16:08.520Z] [RESPONSE] Status: 500 | Message: Server error

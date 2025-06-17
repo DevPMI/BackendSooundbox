@@ -1,45 +1,41 @@
-const bcrypt = require('bcrypt');
-const sequelize = require('../db');
-const { Device } = require('../models');
 const { logRequest, logResponse, logError } = require('../utils/logger');
+const { Transaction } = require('../models');
 
-module.exports = async function registerHandler(req, res) {
-  let body = '';
-  req.on('data', c => body += c);
-  req.on('end', async () => {
+module.exports = async function inquiryHandler(req, res) {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  const id = url.searchParams.get('id');
 
-    logRequest(req, body); // Log request
-    try {
-      const { id, time_register } = JSON.parse(body);
-      logResponse(400,'Missing id/time_register');
-      if (!id || !time_register) return fail(400,'Missing id/time_register',res);
+  logRequest(req, `Query ID: ${id}`);  // sekarang sudah terdefinisi
 
-      await sequelize.sync();
-      if (await Device.findByPk(id)) return fail(409,'Device already registered',res);
+  if (!id) {
+    logResponse(400, 'Missing id parameter');
+    return fail(400, 'Missing id parameter', res);
+  }
 
-      const passwordHash = await bcrypt.hash(time_register.toString(), 10);
-      await Device.create({
-        id,
-        time_register: new Date(time_register * 1000),
-        password: passwordHash,
-        status: true
-      });
-
-      res.writeHead(201,{'Content-Type':'application/json'});
-      res.end(JSON.stringify({
-        status:'success', message:'Device registered',
-        midware_timestamp:Math.floor(Date.now()/1000), response_code:'201'
-      }));
-    } catch(e){ 
-        logError(e); // Log error
-        console.error(e); fail(500,'Server error',res); }
-  });
+  try {
+    const trx = await Transaction.findOne({ where: { device_id: id } });
+    if (!trx) {
+      logResponse(404, `No transaction for ID=${id}`);
+      return fail(404, 'Transaction not found', res);
+    }
+    logResponse(200, `Transaction found for ID=${id}`);
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      status: 'success',
+      data: trx,
+      midware_timestamp: Math.floor(Date.now() / 1000),
+    }));
+  } catch (e) {
+    logError(e);
+    return fail(500, 'Server error', res);
+  }
 };
 
-function fail(code,msg,res){
-  res.writeHead(code,{'Content-Type':'application/json'});
+function fail(code, msg, res) {
+  res.writeHead(code, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({
-    status:'fail', message:msg,
-    midware_timestamp:Math.floor(Date.now()/1000), response_code:String(code)
+    status: 'fail',
+    message: msg,
+    midware_timestamp: Math.floor(Date.now() / 1000),
   }));
 }

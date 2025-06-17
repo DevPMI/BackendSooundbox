@@ -10,3 +10,9 @@
 }
 
 [2025-06-17T16:23:11.941Z] [RESPONSE] Status: 400 | Message: Missing id/time_register
+[2025-06-17T18:09:56.904Z] [REQUEST] POST /register | Body: {
+  "id": "0078000359",
+  "time_register":1749661018
+}
+
+[2025-06-17T18:09:56.906Z] [RESPONSE] Status: 400 | Message: Missing id/time_register

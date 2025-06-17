@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "Backend17",
     "database": "DB_soundbox",
     "host": "127.0.0.1",
     "dialect": "postgres"
