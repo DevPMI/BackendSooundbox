@@ -1,0 +1,29 @@
+// src/utils/logger.js
+const fs = require('fs');
+const path = require('path');
+
+const logFile = path.join(__dirname, '../../logs/service.log');
+
+
+function writeLog(type, message) {
+  const time = new Date().toISOString();
+  const logMessage = `[${time}] [${type.toUpperCase()}] ${message}\n`;
+
+  // Simpan ke file
+  fs.appendFileSync(logFile, logMessage);
+
+  // Juga tampilkan di console
+  console.log(logMessage.trim());
+}
+
+module.exports = {
+  logRequest: (req, body) => {
+    writeLog('request', `${req.method} ${req.url} | Body: ${body}`);
+  },
+  logResponse: (code, message) => {
+    writeLog('response', `Status: ${code} | Message: ${message}`);
+  },
+  logError: (error) => {
+    writeLog('error', error.stack || error.toString());
+  },
+};

@@ -1,13 +1,17 @@
 const bcrypt = require('bcrypt');
 const sequelize = require('../db');
 const { Device } = require('../models');
+const { logRequest, logResponse, logError } = require('../utils/logger');
 
 module.exports = async function registerHandler(req, res) {
   let body = '';
   req.on('data', c => body += c);
   req.on('end', async () => {
+
+    logRequest(req, body); // Log request
     try {
       const { id, time_register } = JSON.parse(body);
+      logResponse(400,'Missing id/time_register');
       if (!id || !time_register) return fail(400,'Missing id/time_register',res);
 
       await sequelize.sync();
@@ -26,7 +30,9 @@ module.exports = async function registerHandler(req, res) {
         status:'success', message:'Device registered',
         midware_timestamp:Math.floor(Date.now()/1000), response_code:'201'
       }));
-    } catch(e){ console.error(e); fail(500,'Server error',res); }
+    } catch(e){ 
+        logError(e); // Log error
+        console.error(e); fail(500,'Server error',res); }
   });
 };
 

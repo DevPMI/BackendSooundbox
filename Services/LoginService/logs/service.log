@@ -1,0 +1,15 @@
+[2025-06-17T16:22:11.478Z] [REQUEST] POST /login | Body: {
+  "id": "0078000353",
+  "password": 1749661018
+}
+[2025-06-17T16:22:11.594Z] [RESPONSE] Status: 200 | Message: Login successful for id=0078000353
+[2025-06-17T16:24:05.643Z] [REQUEST] POST /login | Body: {
+  "id": "0078000350",
+  "password": 1749661018
+}
+[2025-06-17T16:24:05.722Z] [RESPONSE] Status: 401 | Message: Invalid credentials
+[2025-06-17T16:24:18.912Z] [REQUEST] POST /login | Body: {
+  "id": "0078000357",
+  "password": 1749661018
+}
+[2025-06-17T16:24:18.992Z] [RESPONSE] Status: 200 | Message: Login successful for id=0078000357

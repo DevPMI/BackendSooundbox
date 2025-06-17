@@ -1,8 +1,9 @@
 const http = require('http');
-const loginHandler = require('./handlers/loginHandler');
+const loginHandler = require('./handlers/loginHandler'); 
+
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3003;   // contoh: 3003
+const PORT = process.env.PORT || 3003;   
 http.createServer((req,res)=>{
   if (req.method==='POST' && req.url==='/login') return loginHandler(req,res);
 
