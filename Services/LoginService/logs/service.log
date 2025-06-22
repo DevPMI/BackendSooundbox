@@ -18,3 +18,13 @@
   "password": 1749661018
 }
 [2025-06-17T18:10:02.965Z] [RESPONSE] Status: 200 | Message: Login successful for id=0078000357
+[2025-06-18T07:05:52.042Z] [REQUEST] POST /login | Body: {
+  "id": "0078000370",
+  "password": 1749661018
+}
+[2025-06-18T07:05:52.240Z] [RESPONSE] Status: 200 | Message: Login successful for id=0078000370
+[2025-06-22T08:13:10.424Z] [REQUEST] POST /login | Body: {
+  "id": "0078000370",
+  "password": 1749661018
+}
+[2025-06-22T08:13:10.733Z] [RESPONSE] Status: 200 | Message: Login successful for id=0078000370

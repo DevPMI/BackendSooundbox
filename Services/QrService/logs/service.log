@@ -1,0 +1,240 @@
+[2025-06-22T15:23:33.020Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order123",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":10000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T15:23:33.389Z] [RESPONSE] Status: 401 | Message: The API key provided is invalid. Please make sure to use the secret/public API key that you can obtain from the Xendit Dashboard. See https://developers.xendit.co/api-reference/#authentication for more details
+[2025-06-22T15:25:43.625Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order123",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":10000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T15:25:43.839Z] [RESPONSE] Status: 401 | Message: The API key provided is invalid. Please make sure to use the secret/public API key that you can obtain from the Xendit Dashboard. See https://developers.xendit.co/api-reference/#authentication for more details
+[2025-06-22T15:28:34.998Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order123",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":10000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T15:28:35.179Z] [RESPONSE] Status: 401 | Message: The API key provided is invalid. Please make sure to use the secret/public API key that you can obtain from the Xendit Dashboard. See https://developers.xendit.co/api-reference/#authentication for more details
+[2025-06-22T16:08:05.674Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order123",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":10000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T16:08:06.168Z] [RESPONSE] Status: 200 | Message: QR Code created
+[2025-06-22T16:15:14.739Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":10000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T16:15:15.192Z] [RESPONSE] Status: 200 | Message: QR Code created
+[2025-06-22T16:15:30.336Z] [REQUEST] POST /create-qr | Body: {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":20000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T16:15:30.693Z] [RESPONSE] Status: 200 | Message: QR Code created
+[2025-06-22T19:13:38.549Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":20000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:13:38.554Z] [ERROR] Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'node-fetch' imported from D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js
+    at new NodeError (node:internal/errors:406:5)
+    at packageResolve (node:internal/modules/esm/resolve:789:9)
+    at moduleResolve (node:internal/modules/esm/resolve:838:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1043:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:383:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:352:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:228:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:315:34)
+    at importModuleDynamically (node:internal/modules/cjs/loader:1164:37)
+    at importModuleDynamicallyWrapper (node:internal/vm/module:431:21)
+[2025-06-22T19:16:49.624Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:16:49.628Z] [ERROR] Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'node-fetch' imported from D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js
+    at new NodeError (node:internal/errors:406:5)
+    at packageResolve (node:internal/modules/esm/resolve:789:9)
+    at moduleResolve (node:internal/modules/esm/resolve:838:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1043:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:383:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:352:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:228:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:315:34)
+    at importModuleDynamically (node:internal/modules/cjs/loader:1164:37)
+    at importModuleDynamicallyWrapper (node:internal/vm/module:431:21)
+[2025-06-22T19:22:52.680Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:22:53.200Z] [ERROR] SequelizeValidationError: notNull Violation: QRTransaction.qr_id cannot be null
+    at InstanceValidator._validate (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2426:7)
+    at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
+    at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:40:7)
+[2025-06-22T19:26:57.072Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:26:57.296Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:27:21.418Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:27:21.562Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:27:45.520Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:27:45.690Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:28:36.100Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:28:36.361Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:28:46.562Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:28:47.553Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:29:29.583Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:29:29.759Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:29:58.417Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:29:58.600Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:30:07.111Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:30:07.279Z] [RESPONSE] Status: 401 | No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details
+[2025-06-22T19:37:10.770Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:37:11.233Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-22T19:38:07.747Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":50000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:38:08.135Z] [ERROR] Error
+    at Query.run (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2490:35)
+    at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
+    at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:40:7)
+[2025-06-22T19:40:12.071Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1234",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:40:12.374Z] [ERROR] Error
+    at Query.run (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2490:35)
+    at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
+    at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:40:7)
+[2025-06-22T19:40:47.837Z] [REQUEST] POST /create-qr | {
+"reference_id":"order1",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:40:48.164Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-22T19:40:54.624Z] [REQUEST] POST /create-qr | {
+"reference_id":"order2",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:40:54.883Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-22T19:48:57.117Z] [REQUEST] POST /create-qr | {
+"reference_id":  "NMID 17",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:48:57.602Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-22T19:49:03.363Z] [REQUEST] POST /create-qr | {
+"reference_id":  "NMID 17",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T19:49:03.644Z] [ERROR] Error
+    at Query.run (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2490:35)
+    at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
+    at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:40:7)
