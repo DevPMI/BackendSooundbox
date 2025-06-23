@@ -14,6 +14,12 @@ const sequelize = new Sequelize(
   config
 );
 
+Object.keys(db).forEach((modelName) => {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
+
 // load semua model otomatis
 fs.readdirSync(__dirname)
   .filter(f => f !== basename && f.endsWith('.js'))

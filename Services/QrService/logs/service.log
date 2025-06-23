@@ -238,3 +238,89 @@
     at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2490:35)
     at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
     at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:40:7)
+[2025-06-22T20:17:14.899Z] [REQUEST] POST /create-qr | {
+"reference_id":  "NMID 18",
+"type":"DYNAMIC",
+"currency":"IDR",
+"amount":40000,
+"expires_at":"2025-10-23T09:56:43.604Z"
+}
+[2025-06-22T20:17:15.522Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-23T06:44:30.162Z] [REQUEST] POST /create-qr | {
+  "reference_id": "123456",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 40000,
+  "expires_at": "2025-10-23T09:56:43.604Z",
+  "device_id": "0078000370"
+}
+
+[2025-06-23T06:44:30.561Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-23T07:42:46.266Z] [REQUEST] POST /create-qr | {
+  "reference_id": "12345",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 50000,
+  "expires_at": "2025-10-23T09:56:43.604Z",
+  "device_id": "0078000370"
+}
+
+[2025-06-23T07:42:49.084Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-23T07:56:09.874Z] [REQUEST] POST /create-qr | {
+  "reference_id": "345",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 50000,
+  "expires_at": "2025-10-23T09:56:43.604Z",
+  "device_id": "0078000370"
+}
+
+[2025-06-23T07:56:11.888Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-23T08:33:50.421Z] [REQUEST] POST /create-qr | {
+  "reference_id": "order1234-001",
+  "device_id": "0078000370",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 40000,
+  "expires_at": "2025-10-23T09:56:43.604Z"
+}
+
+[2025-06-23T16:51:51.178Z] [REQUEST] POST /create-qr | {
+  "reference_id": "order1234-001",
+  "device_id": "0078000370",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 40000,
+  "expires_at": "2025-10-23T09:56:43.604Z"
+}
+
+[2025-06-23T16:51:51.737Z] [RESPONSE] Status: 200 | QR Code created & saved
+[2025-06-23T16:53:00.556Z] [REQUEST] POST /create-qr | {
+  "reference_id": "order1234-001",
+  "device_id": "0078000370",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 40000,
+  "expires_at": "2025-10-23T09:56:43.604Z"
+}
+
+
+[2025-06-23T16:53:01.116Z] [ERROR] Error
+    at Query.run (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:2490:35)
+    at async QRTransaction.create (D:\BackendSooundbox\Services\QrService\node_modules\sequelize\lib\model.js:1362:12)
+    at async IncomingMessage.<anonymous> (D:\BackendSooundbox\Services\QrService\src\handlers\createQRHandler.js:58:7)
+[2025-06-23T16:53:08.542Z] [REQUEST] POST /create-qr | {
+  "reference_id": "order1234-002",
+  "device_id": "0078000370",
+  "type": "DYNAMIC",
+  "currency": "IDR",
+  "amount": 40000,
+  "expires_at": "2025-10-23T09:56:43.604Z"
+}
+
+
+[2025-06-23T16:53:08.827Z] [RESPONSE] Status: 200 | QR Code created & saved

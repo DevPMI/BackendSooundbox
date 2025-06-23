@@ -22,6 +22,14 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'qr_transactions',
     timestamps: false, // Disable automatic timestamps
   });
+  QRTransaction.associate = (models) => {
+    QRTransaction.belongsTo(models.Device, {
+    foreignKey: 'device_id',
+    as: 'device',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
+  });
+};
 
   return QRTransaction;
 };
